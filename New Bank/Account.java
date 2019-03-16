@@ -117,9 +117,9 @@ public class Account
         return amount;
     }
 
-    public openAccount (String owner, int account)
+    public static Account openAccount (String owner, int account)
     {
-        return Account.Account(owner, account, initial)
+        return new Account(owner, account, 0);
     }
     //-----------------------------------------------------------------
     //  Returns a one-line description of the account as a string.
