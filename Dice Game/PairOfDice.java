@@ -1,4 +1,3 @@
-package Die;
 
 public class PairOfDice
 {
