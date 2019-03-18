@@ -12,6 +12,6 @@ public class BoxCars
                 boxCarsCounter++;
             }
         }
-        System.out.println("Box cars: " + boxCarsCounter);
+        System.out.println("Total box cars: " + boxCarsCounter);
     }
 }

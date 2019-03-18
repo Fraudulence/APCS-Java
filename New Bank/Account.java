@@ -109,14 +109,15 @@ public class Account
         as shown in the method withdraw, which has
         (double amount, double fee). Withdraw calls the amount
         and the fee from the original method, and then the parameter
-        declared calls amount again and returns the value of what is
-        to be withdrawn from the sender and transferred to the recipient.
+        declared, recipient, calls amount again and returns the value of 
+        what's to be withdrawn from the sender and transferred to 
+        the recipient.
         */
         this.withdraw(amount, 0);
         recipient.deposit(amount);
         return amount;
     }
-
+    //Creates a fresh new account with an initial balanace of 0.
     public static Account openAccount (String owner, int account)
     {
         return new Account(owner, account, 0);
