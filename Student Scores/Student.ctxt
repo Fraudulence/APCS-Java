@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Student
+comment1.params=first\ last\ home\ school
+comment1.target=Student(java.lang.String,\ java.lang.String,\ Address,\ Address)
+comment1.text=Overloading\ the\ student\ method\r\n\ Constructors\ create\ objects\r\n\ Methods\ define\ behavior\ of\ the\ objects\r\n\ \r\n\ Return\ types\ like\ int\ and\ double\ are\ variables\ in\ methods\r\n\ Ex\ public\ void\ scores\ (double\ testScore)\r\n\ Return\ types\ that\ include\ class\ names\ are\ objects\r\n\ Ex\ public\ void\ scores\ (Student\ testScore)\r\n
+comment2.params=first\ last\ home\ school\ t1\ t2\ t3
+comment2.target=Student(java.lang.String,\ java.lang.String,\ Address,\ Address,\ double,\ double,\ double)
+comment2.text=Almost\ identical\ constructor\ except\ it\ has\ test\ scores\ to\ send\ to\ the\r\n\ StudentBody\ driver,\ and\ prints\ out\ the\ scores\ for\ each\ student.\r\n\ The\ global\ class\ variables\ reference\ the\ scores\ inputted\ in\ StudentBody\r\n\ and\ gives\ the\ t1,\ t2,\ and\ t3\ values\ FROM\ the\ global\ variables\r\n
+comment3.params=testNumber\ testScore
+comment3.target=double\ setTestScore(int,\ double)
+comment4.params=testNumber\ testScore
+comment4.target=double\ getTestScore(int,\ double)
+comment5.params=
+comment5.target=double\ sum()
+comment6.params=testScoreSum
+comment6.target=double\ average(double)
+comment7.params=
+comment7.target=java.lang.String\ toString()
+numComments=8

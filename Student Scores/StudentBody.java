@@ -20,8 +20,10 @@ public class StudentBody
 
       Address mHome = new Address ("123 Main Street", "Euclid", "OH",
                                    44132);
-      Student marsha = new Student ("Marsha", "Jones", mHome, school);
-
+      Student marsha = new Student ("Marsha", "Jones", mHome, school,
+                                    90.0, 77.0, 84.0);
+      marsha.setTestScore(2,100);
+      
       System.out.println (john);
       System.out.println ();
       System.out.println (marsha);
