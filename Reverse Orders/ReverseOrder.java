@@ -17,21 +17,34 @@ public class ReverseOrder
       System.out.println("How many values are gonna be typed in?");
       Scanner scan = new Scanner (System.in);
       int max = scan.nextInt();
-      double[] numbers = new double[max];
+      int[] numbers = new int[max];
       System.out.println ("The size of the array: " + numbers.length);
+      
 
+      //int b = numbers.length -1;
       for (int index = 0; index < numbers.length; index++)
       {
          System.out.print ("Enter number " + (index+1) + ": ");
-         numbers[index] = scan.nextDouble();
+         numbers[index] = scan.nextInt();
       }
       
       System.out.println ("The numbers in reverse order:");
-
-      for (int index = numbers.length-1; index >= 0; index--)
+      int temp;
+      int b = numbers.length - 1;
+      for (int index = 0; index < numbers.length/2; index++)
       {   
-         System.out.print (numbers[index] + "  ");
+          temp = numbers[index];
+          numbers[index] = numbers[b];
+          numbers[b] = temp;
+          System.out.println("Numbers" + index + "and" + b + "have been swapped");
+          //index++;
+          b--;
       }
-      System.out.println ();
+      
+      for (int index = 0; index < numbers.length; index++)
+      {
+          System.out.print (numbers[index] + " ");
+          System.out.println ();
+      }
    }
 }
