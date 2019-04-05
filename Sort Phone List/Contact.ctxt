@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Contact
+comment1.params=first\ last\ telephone
+comment1.target=Contact(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment3.params=other
+comment3.target=int\ compareTo(java.lang.Object)
+numComments=4
