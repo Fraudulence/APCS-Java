@@ -22,7 +22,8 @@ public class SortPhoneList
       friends[5] = new Contact ("Ching", "Lee", "322-555-2284");
       friends[6] = new Contact ("Susan", "Getz", "243-555-2837");
 
-      Sorts.insertionSort(friends);
+      //Sorts.insertionSort(friends);
+      Sorts.selectionSort(friends);
 
       for (Contact contact: friends)
          System.out.println (contact);

@@ -2,8 +2,10 @@
 comment0.target=Sorts
 comment1.params=numbers
 comment1.target=void\ selectionSort(int[])
-comment2.params=numbers
-comment2.target=void\ insertionSort(int[])
-comment3.params=objects
-comment3.target=void\ insertionSort(java.lang.Comparable[])
-numComments=4
+comment2.params=objects
+comment2.target=void\ selectionSort(java.lang.Comparable[])
+comment3.params=numbers
+comment3.target=void\ insertionSort(int[])
+comment4.params=objects
+comment4.target=void\ insertionSort(java.lang.Comparable[])
+numComments=5

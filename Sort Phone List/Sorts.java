@@ -29,7 +29,25 @@ public class Sorts
          numbers[index] = temp;
       }
    }
-
+   //Overloaded method of selectionSort
+   public static void selectionSort (Comparable[] objects)
+   {
+       Comparable temp;
+       for (int index = 0; index < objects.length-1; index++)
+       {
+           int min = index;
+           for (int scan = index+1; scan < objects.length; scan++)
+           {
+               if (objects[scan].equals(objects[min]))
+               {
+                   min = scan;
+               }
+               temp = objects[index];
+               objects[index] = objects[min];
+               objects[min] = temp;
+           }
+       }
+   }
    //-----------------------------------------------------------------
    //  Sorts the specified array of integers using the insertion
    //  sort algorithm.
