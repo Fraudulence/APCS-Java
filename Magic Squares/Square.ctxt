@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Square
+comment1.params=size
+comment1.target=Square(int)
+comment2.params=row
+comment2.target=int\ sumRow(int)
+comment3.params=col
+comment3.target=int\ sumCol(int)
+comment4.params=
+comment4.target=boolean\ magic()
+comment5.params=scan
+comment5.target=void\ readSquare(java.util.Scanner)
+comment6.params=
+comment6.target=void\ printSquare()
+numComments=7
