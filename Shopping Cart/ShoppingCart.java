@@ -30,13 +30,19 @@ public class ShoppingCart
 
         cart[itemCount] = new Item (itemName, price, quantity);
         totalPrice += price*quantity;
-        capacity++;
+        itemCount++;
     }
     // -------------------------------------------------------
     // Returns the contents of the cart together with
 
     // summary information.
     // -------------------------------------------------------
+    
+    public double getTotalPrice()
+    {
+        return totalPrice;
+    }
+    
     public String toString()
     {
         NumberFormat fmt = NumberFormat.getCurrencyInstance();
@@ -54,9 +60,11 @@ public class ShoppingCart
     private void increaseSize()
     {
         Item[] temp = new Item[cart.length + 3];
+        capacity += 3;
         for (int item = 0; item < cart.length; item++)
-        {   temp[item] = cart[item];
-            cart = temp;
+        {   
+            temp[item] = cart[item];
         }
+        cart = temp;
     }
 }

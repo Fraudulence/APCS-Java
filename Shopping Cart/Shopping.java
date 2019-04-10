@@ -5,35 +5,35 @@ public class Shopping
     {
         Scanner scan = new Scanner(System.in);
         String start = "Yes";
-        String stop = "No";
-        double price = 0.0;
-        int quantity = 0;
+        double price;
+        int quantity;
         double totalPrice = 0.0;
-        String items = ""; //Contains names of items
-        String itemName = "Takes the name of an item";
-        String shopping = "Asks if you want to continue shopping or not";
-        String stopShopping = "No";
+        Item item; //Contains names of items
+        String itemName; //Contains one item name at one time
+        String shopping; //User decides if they keep shopping or not
         ShoppingCart cart = new ShoppingCart();
-        System.out.println("Would you like to start shopping?");
-        shopping = scan.nextLine();
-        while (! shopping.equals(stop) && shopping.equals(start))
+        shopping = start;
+        while (shopping.equals(start))
         {
             System.out.println("What would you like to buy?");
-            itemName = scan.next();
+            itemName = scan.nextLine();
             System.out.println("What is the price of the item?");
             price = scan.nextDouble();
             System.out.println("How many are you buying?");
             quantity = scan.nextInt();
-            totalPrice = price*quantity;
-            items += itemName;
+            
+            scan.nextLine();
+            
+            
+            cart.addToCart(itemName, price, quantity);
+            System.out.println(cart.toString());
             System.out.println("Would you like to continue shopping?");
-            shopping = scan.next();
-            if (shopping.equals(start))
+            shopping = scan.nextLine();
+            //if (shopping.equals(start))
             {
-                items += ", ";
+            //    items += ", ";
             }
         }
-        System.out.println("Items in cart: " + items);
-        System.out.println("Please pay $" + totalPrice);
-        }
+        System.out.println("Please pay $" + cart.getTotalPrice());
     }
+}
