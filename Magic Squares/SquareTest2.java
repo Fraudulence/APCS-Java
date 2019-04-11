@@ -8,7 +8,7 @@
 import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
-public class SquareTest
+public class SquareTest2
 {
     public static void main(String[] args) throws IOException
     {
@@ -21,6 +21,7 @@ public class SquareTest
         {
             //create a new Square of the given size
             Square square = new Square(size);
+            square.readSquare(scan);
             //call its read method to read the values of the square
             System.out.println("\n******** Square " + count + " ********");
             //print the square
@@ -44,10 +45,13 @@ public class SquareTest
             //print the sum of the other diagonal
             System.out.println("The sum of the other diagonal is " + 
             square.sumOtherDiag());
+            System.out.println("The square " + (square.magic() ? "is " : 
+            "is not ") + "a magic square.");
             //determine and print whether it is a magic square
             //System.out.println(square.magic());
             //get size of next square
             size = scan.nextInt();
+            count++;
         }
     }
 }
