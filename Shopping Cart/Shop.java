@@ -14,6 +14,7 @@ public class Shop
         String itemName;
         double itemPrice;
         int quantity;
+        double totalPrice = 0.0;
         Scanner scan = new Scanner(System.in);
         String keepShopping = "y";
         ArrayList <Item> cart = new <Item> ArrayList();
@@ -33,14 +34,15 @@ public class Shop
             for (int i = 0; i < cart.size(); i++)
             {
                 Item temp = cart.get(i);
-                double totalPrice = 0.0;
-                totalPrice += itemPrice;
                 System.out.println(temp);
+                totalPrice += temp.getPrice()*temp.getQuantity();
             }
+            System.out.println(totalPrice);
             System.out.print ("Continue shopping (y/n)? ");
             keepShopping = scan.nextLine();
-            System.out.println(cart);
+            //System.out.println(cart);
         }
         while (keepShopping.equals("y"));
+        System.out.println(totalPrice);
     }
 }
