@@ -186,9 +186,34 @@ public class Picture extends SimplePicture
         } 
     }
 
-    public void mirrorArms()
+    public void mirrorArms() //Needs work
     {
+        Pixel[][] pixels = this.getPixels2D();
+        Pixel topPixel = null;
+        Pixel bottomPixel = null;
+        int width = 5;
         
+        //Mirrors left side of the snowman
+        for (int row = 155; row < 191; row++)
+        {
+            for (int col = 90; col < 169; col++)
+            {
+                topPixel = pixels[row][col];
+                bottomPixel = pixels[191-row+191][col];
+                bottomPixel.setColor(topPixel.getColor());
+            }
+        } 
+        
+        //Mirrors right side of the snowman
+        for (int row = 155; row < 191; row++)
+        {
+            for (int col = 238; col < 296; col++)
+            {
+                topPixel = pixels[row][col];
+                bottomPixel = pixels[191-row+191][col];
+                bottomPixel.setColor(topPixel.getColor());
+            }
+        } 
     }
     
     /** Method that mirrors the picture around a 
@@ -241,15 +266,17 @@ public class Picture extends SimplePicture
         for (int row = 27; row < 97; row++)
         {
             // loop from 13 to just before the mirror point
+            count++;
             for (int col = 13; col < mirrorPoint; col++)
             {
-
                 leftPixel = pixels[row][col];      
                 rightPixel = pixels[row]                       
                 [mirrorPoint - col + mirrorPoint];
                 rightPixel.setColor(leftPixel.getColor());
+                count++;
             }
         }
+        System.out.println(count);
     }
 
     /** copy from the passed fromPic to the
